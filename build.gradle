@@ -34,11 +34,3 @@ task checkstyleMain (type: Checkstyle, overwrite: true) {
     configFile = file("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
 }
 
-test {
- useJUnitPlatform()
- ignoreFailures = true
- reports {
- junitXml.enabled = true
- html.enabled = false
- }
-}
