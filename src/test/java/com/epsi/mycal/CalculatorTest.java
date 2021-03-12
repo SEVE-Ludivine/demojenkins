@@ -56,8 +56,8 @@ public class CalculatorTest {
   public void testNbPair() {
     int a = 6;
     Calculator calc = new Calculator();
-    int actual = calc.nbPair(a);
-    assertEquals(0, actual);
+    boolean actual = calc.nbPair(a);
+    assertEquals(true, actual);
   }
 
   @Test
