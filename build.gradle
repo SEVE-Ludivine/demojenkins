@@ -4,6 +4,7 @@ plugins {
     id 'idea'
     id 'jacoco'
     id 'checkstyle'
+    id "com.github.spotbugs" version "3.0.0"
 }
 repositories {
     mavenCentral()
@@ -31,4 +32,15 @@ task checkstyleMain (type: Checkstyle, overwrite: true) {
     exclude '**/gen/**'
     classpath = fileTree(classesJava)
     configFile = file("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
+}
+tasks.withType(com.github.spotbugs.SpotBugsTask) {
+ ignoreFailures = true
+}
+test {
+ useJUnitPlatform()
+ ignoreFailures = true
+ reports {
+ junitXml.enabled = true
+ html.enabled = false
+ }
 }
