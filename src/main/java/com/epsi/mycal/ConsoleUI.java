@@ -6,7 +6,7 @@ package com.epsi.mycal;
  * @author ludiv
  *
  */
-public class ConsoleUI {
+public class ConsoleUi {
   /*public void displayFunctionAvailable() {
     System.out.println("Function available \n\t1 : add \n\t2 : sub ...");
   }
