@@ -1,5 +1,6 @@
 package com.epsi.mycal;
 
+import java.nio.charset.Charset;
 import java.util.Scanner;
 
 public class Application {
@@ -8,7 +9,7 @@ public class Application {
  * @param args un tableau.
  */
   public static void main(String[] args) {
-    Scanner scanner = new Scanner( System.in );
+    Scanner scanner = new Scanner(System.in, Charset.defaultCharset());
     Calculator calc = new Calculator();
     int valueB = 1;
     System.out.print( "Veuillez saisir un calcul (+,-,*,/,prem,pair) : " );
