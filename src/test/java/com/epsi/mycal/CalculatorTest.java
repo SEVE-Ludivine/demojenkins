@@ -37,12 +37,12 @@ public class CalculatorTest {
 	}
 	@Test
 	public void testMul() {
-		int a = 4;
+		int a = 3;
 		int b = 2;
 		
 		Calculator calc = new Calculator();
 		int actual = calc.mul(a, b);
-		assertEquals(8, actual);
+		assertEquals(6, actual);
 	}
 
 }
