@@ -33,9 +33,7 @@ task checkstyleMain (type: Checkstyle, overwrite: true) {
     classpath = fileTree(classesJava)
     configFile = file("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
 }
-tasks.withType(com.github.spotbugs.SpotBugsTask) {
- ignoreFailures = true
-}
+
 test {
  useJUnitPlatform()
  ignoreFailures = true
