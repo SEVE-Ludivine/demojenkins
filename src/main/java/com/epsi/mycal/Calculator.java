@@ -17,8 +17,14 @@ public class Calculator {
     return valueA / valueB;
   }
 
-  public int nbPair(int valueA) {
-    return valueA % 2;
+  public boolean nbPair(int valueA) {
+    int result = valueA % 2;
+    if (result == 1) {
+      return false;
+    }
+    else {
+      return true;
+    }
   }
   
   public boolean isPremier(int valueA) {
